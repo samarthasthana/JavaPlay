@@ -13,9 +13,8 @@ public class JavaPlay {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        //testing if Queue works find or not
-       /* QueueA test=new QueueA();
+    public void testing_QueueQ(){
+         QueueA test=new QueueA();
         test.enqueue(1);
         test.enqueue(2);
         test.enqueue(3);
@@ -25,8 +24,10 @@ public class JavaPlay {
         System.out.println(test.dequeue());
         System.out.println(test.dequeue());
         System.out.println(test.dequeue());
-        * 
-        // testing Stack2Q code
+    
+    }
+    
+    public void testing_Stack2Q(){
         try{
         Stack2Q test= new Stack2Q();
         test.push(2);
@@ -43,12 +44,22 @@ public class JavaPlay {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-        * 
-        //testing Fibo
+    }
+    
+    public void testing_fibo(){
+         //testing Fibo
         Fibo obj =new Fibo();
         System.out.println(obj.calc_fibo(6));
         System.out.println(obj.fibo_cached(6));
-        */
-        
+    }
+    
+    public void testing_StringRev(){
+        StringRev obj=new StringRev();
+        System.out.println(obj.reverseString("This is a test String"));
+        System.out.println(obj.reverseWords("Samarth Asthana"));
+    }
+    public static void main(String[] args) {
+      JavaPlay tester=new JavaPlay();
+      //tester.testing_StringRev();      
     }
 }
