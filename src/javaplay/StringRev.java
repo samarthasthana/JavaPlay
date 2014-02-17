@@ -1,5 +1,7 @@
 package javaplay;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sam
@@ -50,5 +52,17 @@ public class StringRev {
             i++;
         }
         return temp;
-    }        
+    }
+    
+    public boolean checkUniqueString(String str){
+       int len=str.length(),i=0;
+       boolean ret=true;
+       ArrayList lst=new ArrayList();
+       while(i<len){
+           if(lst.contains(str.charAt(i)))ret=false;
+           else lst.add(str.charAt(i));
+           i++;
+       }       
+    return ret;
+    }
 }

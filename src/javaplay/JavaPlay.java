@@ -57,9 +57,10 @@ public class JavaPlay {
         StringRev obj=new StringRev();
         System.out.println(obj.reverseString("This is a test String"));
         System.out.println(obj.reverseWords("Samarth Asthana"));
+        System.out.println(obj.checkUniqueString("Sasthn3"));
     }
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      //tester.testing_StringRev();      
+      tester.testing_StringRev();      
     }
 }
