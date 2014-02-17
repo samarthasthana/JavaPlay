@@ -43,6 +43,12 @@ public class JavaPlay {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-        * */
+        * 
+        //testing Fibo
+        Fibo obj =new Fibo();
+        System.out.println(obj.calc_fibo(6));
+        System.out.println(obj.fibo_cached(6));
+        */
+        
     }
 }
