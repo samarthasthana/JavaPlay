@@ -4,6 +4,9 @@
  */
 package javaplay;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Sam
@@ -59,8 +62,25 @@ public class JavaPlay {
         System.out.println(obj.reverseWords("Samarth Asthana"));
         System.out.println(obj.checkUniqueString("Sasthn3"));
     }
+    
+    public void testing_get_intersects_sorted(){
+        ListIntersection obj=new ListIntersection();
+        Integer [] a={2,4,6,8,10};
+        Integer [] b={1,4,5,7,10};
+        List<Integer> arr=obj.get_intersects_sorted(a,b,a.length,b.length);
+        System.out.println(arr.toString());
+    }
+    
+    public void testing_get_intersects_nos(){
+     ListIntersection obj=new ListIntersection();
+        Integer [] a={6,8,10,2,4,};
+        Integer [] b={4,5,1,7,10};
+        List<Integer> arr=obj.get_intersects_nos(a,b);
+        System.out.println(arr);
+    }
+    
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_StringRev();      
+      tester.testing_get_intersects_nos();      
     }
 }
