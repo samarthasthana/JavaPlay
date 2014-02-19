@@ -79,8 +79,22 @@ public class JavaPlay {
         System.out.println(arr);
     }
     
+    public void testing_check_pal(){
+    Palindrome obj=new Palindrome();
+    System.out.println(obj.check_pal("Poliop"));
+    }
+    
+    
+    public void testing_find_intersection(){
+    Palindrome obj=new Palindrome();
+    List<Character> lst=new ArrayList<Character>();
+    lst=obj.find_intersection("Samarth","ASthana");
+    System.out.println(lst);
+    }
+    
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_get_intersects_nos();      
+      tester.testing_check_pal();
+      tester.testing_find_intersection();
     }
 }
