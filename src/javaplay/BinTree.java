@@ -5,10 +5,7 @@ class BinTree{
 	public class Node{
 	Node rchild,lchild,parent;
 	Integer data;
-		Node(){
-		rchild=new Node();
-		lchild=new Node();
-		parent=new Node();
+		Node(){		
 		data=0;
 		rchild=null;
 		lchild=null;
@@ -31,11 +28,11 @@ class BinTree{
 		Node nd=new Node();
 		if(root==null){
 			//add to root
-			root=nd;
-			nd.rchild=null;
+                        nd.rchild=null;
 			nd.lchild=null;
 			nd.parent=null;
 			nd.data=val;
+			root=nd;			
 		}
 		else{
 			if(node.data<val){
@@ -143,7 +140,7 @@ class BinTree{
 	public void inorder_trav(Node nd){
 		if(nd!=null){
 			inorder_trav(nd.lchild);
-			System.out.print(nd.data);
+			System.out.printf("%d \t",nd.data);
 			inorder_trav(nd.rchild);
 		}
 	}

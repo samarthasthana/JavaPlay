@@ -92,9 +92,35 @@ public class JavaPlay {
     System.out.println(lst);
     }
     
+    public void testing_bintree(){
+        BinTree obj=new BinTree();        
+        obj.add_element(obj.get_root(), 10);
+        obj.add_element(obj.get_root(), 8);
+        obj.add_element(obj.get_root(), 5);
+        obj.add_element(obj.get_root(), 12);
+        obj.add_element(obj.get_root(), 15);
+        obj.add_element(obj.get_root(), 7);
+        obj.add_element(obj.get_root(), 13);
+        
+        obj.inorder_trav(obj.get_root());
+        System.out.println();
+        System.out.println(obj.get_depth(obj.get_root()));
+        
+    }
+    
+    public void testing_UniqueString(){
+        UniqueString obj=new UniqueString();
+        System.out.println(obj.findUniqueString("Samarth Asthana"));        
+    }
+    
+    public void testing_NumberQuestions(){
+        NumberQuestions obj=new NumberQuestions();
+        System.out.println(obj.factorial(5));
+        System.out.println(obj.isPalindrome(6));
+    }
+    
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_check_pal();
-      tester.testing_find_intersection();
+      tester.testing_NumberQuestions();
     }
 }
