@@ -6,7 +6,14 @@ package javaplay;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
 /**
  *
  * @author Sam
@@ -75,5 +82,48 @@ public class TestingMethods {
                 Arrays.sort(myInts,compare);
                 print_arr(myInts);                                
 	}   
-               
+        public void testMaps(){
+            Map<Character,Integer> myMap=new HashMap<>();
+            String test="This is the test sentence ";
+            test=test.trim();
+            for(char ch:test.toCharArray()){
+                if(myMap.containsKey(ch)){
+                    myMap.put(ch, myMap.get(ch)+1);
+                }else{
+                    myMap.put(ch,(Integer)1);                    
+                }
+            }
+            System.out.println(myMap.size());
+            Iterator it=myMap.entrySet().iterator();
+            while(it.hasNext()){
+                Map.Entry pair=(Map.Entry)it.next();
+                System.out.println(pair.getKey()+" = "+pair.getValue());  
+                it.remove();
+            }
+        }
+        
+        private void print_Set(Set<Character> set){
+            System.out.println("Printing Set");
+            System.out.println("Size="+set.size());
+            Iterator<Character> it=set.iterator();            
+            while(it.hasNext()){
+                System.out.print(it.next()+"\t");
+            }
+            System.out.println();
+        }
+        public void testSet(){
+            // contains , add , isEmpty, size , iterator
+            Set<Character> myHashSet=new HashSet<>();
+            Set<Character> myLinkSet=new LinkedHashSet<>();
+            Set<Character> myTreeSet=new TreeSet<>();
+            String test="Samarth Asthana";
+            for(Character ch: test.toCharArray()){
+                myHashSet.add(ch);
+                myLinkSet.add(ch);
+                myTreeSet.add(ch);
+            }            
+            print_Set(myHashSet);
+            print_Set(myLinkSet);
+            print_Set(myTreeSet);
+        }
 }
