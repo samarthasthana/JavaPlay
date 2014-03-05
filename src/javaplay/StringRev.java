@@ -65,4 +65,19 @@ public class StringRev {
        }       
     return ret;
     }
+    
+    public void stringPermute(int level,String orig,String perm,boolean[] use){
+	if(level==orig.length()){
+		System.out.println(perm);
+	}
+	else{
+		for(int i=0;i<orig.length();i++){
+			if(!use[i]){
+				use[i]=true;
+				stringPermute(level+1,orig,perm+orig.charAt(i),use);
+				use[i] = false;
+			}
+		}
+	}
+    }
 }

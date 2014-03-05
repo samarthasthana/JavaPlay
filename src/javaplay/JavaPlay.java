@@ -119,8 +119,20 @@ public class JavaPlay {
         System.out.println(obj.isPalindrome(6));
     }
     
+    public void testing_permute(){
+        String test="abc";
+        boolean[] use=new boolean[test.length()];
+        StringRev obj=new StringRev();
+        obj.stringPermute(0, test, "", use);
+    }
+    
+    public void testing_TestingMethods(){
+        TestingMethods obj=new TestingMethods();
+        obj.testing_StringArrays();
+    }
+    
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_NumberQuestions();
+      tester.testing_TestingMethods();
     }
 }
