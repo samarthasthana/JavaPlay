@@ -128,7 +128,7 @@ public class JavaPlay {
     
     public void testing_TestingMethods(){
         TestingMethods obj=new TestingMethods();
-        obj.testSet();
+        obj.test_Lists();
     }
     
     public static void main(String[] args) {

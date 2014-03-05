@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package javaplay;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -10,10 +11,13 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Vector;
 /**
  *
  * @author Sam
@@ -125,5 +129,31 @@ public class TestingMethods {
             print_Set(myHashSet);
             print_Set(myLinkSet);
             print_Set(myTreeSet);
+        }
+        
+        private void print_List(List<Character> lst){
+            Iterator<Character> it=lst.iterator();
+            while(it.hasNext()){
+                System.out.print(it.next()+"\t");
+            }
+            System.out.println();
+        }
+        public void test_Lists(){
+            // add remove contains iterator clear size
+            List<Character> myList=new ArrayList<>();
+            List<Character> myLinkList=new LinkedList<>();
+            List<Character> myVector=new Vector<>();
+            
+            String test="Samarth asthana";
+            for(Character ch: test.toCharArray()){
+                myList.add(ch);
+                myLinkList.add(ch);
+                myVector.add(ch);
+            }
+            print_List(myList);
+            while(myList.indexOf('a')!=-1){
+                myList.remove(myList.indexOf('a'));
+            }
+            print_List(myList);
         }
 }
