@@ -14,8 +14,10 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.Set;
+import java.util.Stack;
 import java.util.TreeSet;
 import java.util.Vector;
 /**
@@ -156,4 +158,29 @@ public class TestingMethods {
             }
             print_List(myList);
         }
+        
+        public void test_priority(){
+            PriorityQueue<Integer> pq=new PriorityQueue<>(MAXI,Collections.reverseOrder());
+            pq.add(10);
+            pq.add(19);
+            pq.add(21);
+            pq.add(8);
+            pq.add(5);                        
+            System.out.println("Printing the Queue");
+            
+            while(!pq.isEmpty()){
+            System.out.println(pq);
+            System.out.println(pq.poll());                
+            }                       
+        }
+        
+        public void check_odd(Integer arr[]){
+            Set<Integer> mySet=new HashSet<>();
+            for(Integer num:arr){
+                if(mySet.contains(num))mySet.remove(num);
+                else mySet.add(num);
+            }
+            System.out.println(mySet);
+        }
+        
 }

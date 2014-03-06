@@ -128,7 +128,8 @@ public class JavaPlay {
     
     public void testing_TestingMethods(){
         TestingMethods obj=new TestingMethods();
-        obj.test_Lists();
+        Integer[] test={9,4,9,1,5};
+        obj.check_odd(test);
     }
     
     public static void main(String[] args) {
