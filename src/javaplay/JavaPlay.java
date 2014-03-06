@@ -132,8 +132,12 @@ public class JavaPlay {
         obj.check_odd(test);
     }
     
+    public void testing_permuteString(){
+        PermuteString obj=new PermuteString();
+        obj.permString("samarth");
+    }
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_TestingMethods();
+      tester.testing_permuteString();
     }
 }
