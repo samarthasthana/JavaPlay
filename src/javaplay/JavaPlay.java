@@ -6,6 +6,7 @@ package javaplay;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  *
@@ -136,8 +137,23 @@ public class JavaPlay {
         PermuteString obj=new PermuteString();
         obj.permString("samarth");
     }
+    
+    public void testing_inheritance(){
+        CClass obj=new CClass();        
+    }
+    
+    public void testing_klarge(){
+        KLarge obj=new KLarge();
+        Integer[] inArr={2,6,4,7,9,1,0,11,15,16,13,19};
+        Queue<Integer> result;
+        result=obj.findKLarge(inArr, 4);
+        System.out.println("Results are");
+        while(!result.isEmpty()){
+            System.out.print(result.poll()+"\t");
+        }
+    }
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_permuteString();
+      tester.testing_klarge();
     }
 }
