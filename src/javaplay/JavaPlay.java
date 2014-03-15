@@ -152,8 +152,22 @@ public class JavaPlay {
             System.out.print(result.poll()+"\t");
         }
     }
+    
+    public void testing_StringCompress(){
+        StringRev obj=new StringRev();
+        System.out.println(obj.compress_string("aabbbcccccdeaa"));
+    }
+    
+    public void testing_check_reverse(){
+        NumberQuestions obj=new NumberQuestions();
+        if(obj.check_reverse(123421)){
+            System.out.println("True");
+        }else{
+            System.out.println("False");
+        }
+    }
     public static void main(String[] args) {
       JavaPlay tester=new JavaPlay();
-      tester.testing_klarge();
+      tester.testing_check_reverse();
     }
 }

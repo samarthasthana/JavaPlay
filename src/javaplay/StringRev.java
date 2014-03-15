@@ -12,6 +12,33 @@ public class StringRev {
     StringRev() {
     sent="";
     }
+    
+    public String compress_string(String str){
+	str=str+' ';
+	int len=str.length(),i=0;
+	char temp=' ';
+	int freq=0;
+	StringBuilder sb=new StringBuilder();
+	while(i<len){
+		if(temp==str.charAt(i)){
+                    freq++;
+		}
+		else{
+			if(freq!=0){
+                            sb.append(temp);
+                            sb.append(freq+1);
+                            }
+                        else{                          
+                        sb.append(temp);
+                        }
+			freq=0;
+			temp=str.charAt(i);
+		}
+		i++;
+	}
+        return sb.toString();
+}
+    
     public char[] reverseString(String val){
         int i=0,j=val.length()-1;
         char[] temp=val.toCharArray();

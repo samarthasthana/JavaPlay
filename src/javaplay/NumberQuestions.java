@@ -9,6 +9,28 @@ package javaplay;
  * @author Sam
  */
 public class NumberQuestions {
+    
+    public boolean check_reverse(Integer val){
+	double digits=0.0,reverse=0.0;
+	Integer temp=val;      
+	if(val==null){
+	return false;
+	}
+	else{
+		while(temp!=0){
+		digits++;
+		temp=temp/10;
+		}
+		temp=val;
+		while(digits!=0.0){
+			reverse+=(temp%10) *(Math.pow(10.0, digits-1));                        
+			temp=temp/10;
+			digits--;
+		}
+		if(reverse==val.doubleValue())return true;
+		else return false;
+	}
+}
  
     public int factorial(int n){
 		if(n==1) return 1;
